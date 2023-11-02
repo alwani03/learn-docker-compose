@@ -13,3 +13,6 @@ docker compose stop
 ## Delete ##
 docker compose down
 
+## File Project ##
+docker compose ls
+
