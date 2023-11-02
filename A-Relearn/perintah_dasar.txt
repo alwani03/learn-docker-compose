@@ -1,0 +1,15 @@
+## create ##
+docker compose create
+
+## Running ##
+docker compose start
+
+## See ##
+docker compose ps
+
+## Stop ##
+docker compose stop
+
+## Delete ##
+docker compose down
+
