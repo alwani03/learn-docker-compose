@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  mongodb1:
+    image: mongo:latest
+    container_name: mongodb1
+    ports:
+      - "27017:27017"
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: alwani
+        MONGO_INITDB_ROOT_PASSWORD: alwani
+        MONGO_INITDB_ROOT_DATABASE: admin
+    volumes:
+      - "/Users/achmadalwani/Documents/Learn/learnDocker/learn-docker-compose/A-Relearn/bind-amount/bind-short/local_file:/data/db"
+  
+  mongodb2:
+    image: mongo:latest
+    container_name: mongodb2
+    ports:
+      - "27018:27017"
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: alwani
+        MONGO_INITDB_ROOT_PASSWORD: alwani
+        MONGO_INITDB_ROOT_DATABASE: admin
+    volumes:
+      - type: bind
+        source: "/Users/achmadalwani/Documents/Learn/learnDocker/learn-docker-compose/A-Relearn/bind-amount/bind-long/local_file"
+        target: "/data/db"
+        read_only: false
